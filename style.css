@@ -1,0 +1,45 @@
+body{
+    background-color: #fdf0d5;
+}
+.Heart{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    margin: 100px;
+    top: 0;
+    transform: rotate(-45deg);
+    animation: beat 1s infinite alternate;
+}
+.h1{
+   
+}
+
+.Heart::before,
+.Heart:after{
+    content: '';
+    background-color: red;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.Heart:after{
+    left: 50px;
+    top: 0;
+}
+
+.Heart:before{
+    top: -50px;
+    left: 0;
+}
+
+@keyframes beat{
+    0%{
+        transform: scale(1) rotate(-45deg);
+
+    }
+    100%{
+        transform: scale(1.1) rotate(-45deg);
+    }
+}
